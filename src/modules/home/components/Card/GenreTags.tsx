@@ -7,6 +7,7 @@ type GenreTagsProps = {
 
 const GenreTags = (props: GenreTagsProps) => {
   const genres = useMoviesStore((state) => state.genres);
+  if(!props.genreIds) return null;
   return (
     <Row>
       {props.genreIds?.map((id) => <Tag key={id}>{genres[id]}</Tag>)}

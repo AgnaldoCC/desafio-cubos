@@ -1,6 +1,8 @@
 import { useEffect, useMemo } from "react";
 import { useGenres } from "../../api/movies";
-import { Genre, useMoviesStore } from "../../store/movies.store";
+import DefaultTemplate from "../../commonComponents/DefaultTemplate";
+import { useMoviesStore } from "../../store/movies.store";
+import { Genre } from "../../types/commonTypes";
 import HomeContent from "./components/HomeContent";
 import HomeHeader from "./components/HomeHeader"
 import MovieSearch from "./components/MovieSearch";
@@ -20,16 +22,15 @@ const HomePage = () => {
   useEffect(() => {
     setGenres(formattedGenres);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [genres]);
   
   return (
-    <>
-      <HomeHeader />
+    <DefaultTemplate>
       <HomeContent>
         <MovieSearch />
         <MoviesList />
       </HomeContent>
-    </>
+    </DefaultTemplate>
   )
 }
 

@@ -2,39 +2,19 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import styled from "styled-components";
 import { useMovies } from "../../../api/movies";
+import Spinner from "../../../commonComponents/Spinner";
 import { useMoviesStore } from "../../../store/movies.store";
+import { Movies } from "../../../types/commonTypes";
 import MovieCard from "./Card/MovieCard";
 import Pagination from "./Pagination";
 
-export type Movie = {
-  adult: boolean;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
-
-export type Movies = {
-  page: number;
-  total_pages: number;
-  total_results: number;
-  results: Movie[];
-}
-
 const MoviesList = () => {
   const { page, query} = useMoviesStore((state) => ({page: state.page, query: state.query}));
-  const { data: movies }: {data: Movies} = useMovies(query, page);
+  const { data: movies, isLoading }: {data: Movies, isLoading: boolean} = useMovies(query, page);
 
   return (
     <MoviesContainer>
+      {isLoading && <Spinner />}
       {movies?.results.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
       <Pagination movies={movies} />
     </MoviesContainer>
