@@ -22,6 +22,7 @@ const Row = styled.div`
   align-items: center;
   gap: 15px;
   margin-top: 40px;
+  flex-wrap: wrap;
 `;
 
 const Tag = styled.label`

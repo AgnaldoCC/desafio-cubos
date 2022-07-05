@@ -24,7 +24,12 @@ const SearchInput = styled.input`
   outline: none;
   width: 100%;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 15px;
+  width: 100%;
+  
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
 `;
 
 export default MovieSearchInput;

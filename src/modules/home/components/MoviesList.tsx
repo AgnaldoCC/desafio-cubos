@@ -16,7 +16,7 @@ const MoviesList = () => {
     <MoviesContainer>
       {isLoading && <Spinner />}
       {movies?.results.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
-      <Pagination movies={movies} />
+      {/* <Pagination movies={movies} /> */}
     </MoviesContainer>
   )
 };

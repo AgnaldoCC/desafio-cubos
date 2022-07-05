@@ -1,11 +1,11 @@
 import ReactPaginate from "react-paginate";
 import styled from "styled-components";
 import { useMoviesStore } from "../../../store/movies.store";
-import { Movies } from "./MoviesList";
+import { Movies } from "../../../types/commonTypes";
 
 type PaginationProps = {
   movies: Movies;
-}
+};
 
 type PageData = {
   selected: number;

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styled from "styled-components";
-import { Movie } from "../MoviesList";
+import { Movie } from "../../../../types/commonTypes";
 import CardImage from "./CardImage";
 import GenreTags from "./GenreTags";
 import MovieCardHeader from "./MovieCardHeader";
@@ -33,9 +33,13 @@ const MovieCard = (props: MovieCardProps) => {
 
 const MovieCardContent = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-radius: 12px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
 const MovieCardInfo = styled.div`
