@@ -21,7 +21,7 @@ const Pagination = (props: PaginationProps) => {
     <MyPaginate         
     breakLabel="..."
     nextLabel=">"
-    pageRangeDisplayed={6}
+    pageRangeDisplayed={4}
     pageCount={props.movies?.total_pages}
     marginPagesDisplayed={0}
     previousLabel="<"
@@ -37,8 +37,14 @@ const MyPaginate = styled(ReactPaginate).attrs({
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  padding: 0 5rem;
   height: auto;
+  padding: 0px;
+  margin: 0 auto;
+  
+  @media screen and (min-width: 1024px) {
+    padding: 0 5rem;
+  }
+
   li a {
     display: flex;
     justify-content: center;
@@ -48,6 +54,7 @@ const MyPaginate = styled(ReactPaginate).attrs({
     width: 40px;
     height: 40px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
   }
   li.previous a,
   li.next a,

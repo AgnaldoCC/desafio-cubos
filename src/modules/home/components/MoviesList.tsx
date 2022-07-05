@@ -16,7 +16,7 @@ const MoviesList = () => {
     <MoviesContainer>
       {isLoading && <Spinner />}
       {movies?.results.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
-      {/* <Pagination movies={movies} /> */}
+      <Pagination movies={movies} />
     </MoviesContainer>
   )
 };
@@ -26,6 +26,7 @@ const MoviesContainer = styled.div`
   flex-direction: column;
   margin-top: 60px;
   gap: 40px;
+  width: 100%;
 `;
 
 export default MoviesList;

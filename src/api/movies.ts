@@ -17,7 +17,7 @@ async function searchMovies({ query, page } : { query: string, page: number }) {
 export const useMovies = (query: string, pageNumber: number) => {
   const { data, ...params } = useQuery(
     ['movies', { query, pageNumber }],
-    () => searchMovies({ query, page: pageNumber }),
+    () => searchMovies({ query, page: pageNumber}),
     { keepPreviousData: true, enabled: !!query },
   );
   return { ...params, data }

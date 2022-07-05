@@ -6,7 +6,7 @@ const HomeContent = styled.div`
   padding: 10px 20px;
 
   @media screen and (min-width: 1024px) {
-    padding: 3rem 6rem;
+    padding: 3rem 10rem;
   }
 
 `;
