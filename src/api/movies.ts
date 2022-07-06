@@ -47,8 +47,3 @@ export const useMovieDetails = (movieId: string) => {
   const result = useQuery(['movieDetails', movieId], () => getMovieDetails(movieId));
   return result;
 }
-
-// export async function getMovieVideo() {
-//   const response = await apiClient.get("/movie/284053/videos");
-//   return response.data;
-// }

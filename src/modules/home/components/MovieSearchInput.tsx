@@ -7,7 +7,7 @@ const MovieSearchInput = () => {
   const [text, setText] = useState('');
   const [value] = useDebounce(text, 1000);
   const setQuery = useMoviesStore(state => state.setQuery);
-  setQuery(value);
+  text && setQuery(value);
   
   return (
     <SearchInput 
@@ -26,6 +26,10 @@ const SearchInput = styled.input`
   border-radius: 30px;
   font-size: 15px;
   width: 100%;
+
+  &:focus {
+    font-size: 15px;
+  }
   
   @media screen and (min-width: 1024px) {
     font-size: 20px;

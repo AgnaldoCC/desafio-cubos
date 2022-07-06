@@ -5,7 +5,7 @@ import DefaultTemplate from "../../commonComponents/DefaultTemplate";
 import CardImage from "../home/components/Card/CardImage";
 import { IMAGE_URL } from "../home/components/Card/MovieCard";
 import MovieDetailsCard from "./Card/MovieDetailsCard";
-import YouTube from 'react-youtube';
+import YoutubePlayer from "./Card/YoutubePlayer";
 
 const MovieDetails = () => {
   const router = useRouter();
@@ -19,9 +19,7 @@ const MovieDetails = () => {
         <MovieDetailsCard movie={movie} />
         <RoundedImage src={`${IMAGE_URL}${movie?.poster_path}`} alt='Movie poster' />
       </Container>
-      <CustomYoutubePlayer 
-        videoId={movie?.videos.results[0].key} 
-      />
+      <YoutubePlayer movie={movie} />
     </DefaultTemplate>
   )
 };
@@ -47,15 +45,5 @@ const RoundedImage = styled(CardImage)`
     width: unset;
   }
 `;
-
-const CustomYoutubePlayer = styled(YouTube)`
-  margin: 40px auto 0;
-  width: 100%;
-  max-width: 1000px;
-  iframe {
-    width: 100%;
-    height: 500px;
-  }
-`;  
 
 export default MovieDetails

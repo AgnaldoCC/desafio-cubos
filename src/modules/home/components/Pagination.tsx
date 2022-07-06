@@ -15,6 +15,7 @@ const Pagination = (props: PaginationProps) => {
   const setPage = useMoviesStore((state) => state.setPage);
   if(!props.movies) return null;
   const handlePageChange = (data: PageData) => {
+    window.scrollTo(0,0);
     setPage(data.selected + 1);
   }
   return (
