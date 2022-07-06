@@ -13,4 +13,4 @@
     - git clone https://github.com/AgnaldoCC/desafio-cubos.git (https) <br>
     - OU git@github.com:AgnaldoCC/desafio-cubos.git (SSH)
   2. Digitar no terminal `yarn start`, e em seguida, abrir o navegador na seguinte URL: [localhost:3000/movies](localhost:3000/movies)
-  3. Caso não seja possível fazer o clone da aplicação, também há uma versão dela rodando no seguinte link: <br>[https://movies-ar9l5ejxn-agnaldocc.vercel.app/movies](https://movies-ar9l5ejxn-agnaldocc.vercel.app/movies)
+  3. Caso não seja possível fazer o clone da aplicação, também há uma versão dela rodando no seguinte link: <br>[https://movies-iwr2pfkj9-agnaldocc.vercel.app/movies](https://movies-iwr2pfkj9-agnaldocc.vercel.app/movies)
