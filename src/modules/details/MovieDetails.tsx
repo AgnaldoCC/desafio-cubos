@@ -35,6 +35,7 @@ const Container = styled.div`
   
   @media screen and (min-width: 1024px) {
     flex-direction: row;
+    margin: 0 auto;
   }
 `;
 
@@ -50,6 +51,7 @@ const RoundedImage = styled(CardImage)`
 const CustomYoutubePlayer = styled(YouTube)`
   margin: 40px auto 0;
   width: 100%;
+  max-width: 1000px;
   iframe {
     width: 100%;
     height: 500px;
