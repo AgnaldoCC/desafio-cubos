@@ -26,6 +26,21 @@ export type Movie = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  status: string;
+  runtime: number;
+  budget: number;
+  revenue: number;
+  genres: Genre[];
+  videos: Videos;
+}
+
+export type Video = {
+  key: string;
+  id: string;
+}
+
+export type Videos = {
+  results: Video[];
 }
 
 export type Movies = {

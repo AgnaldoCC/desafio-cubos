@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProgressBarCircle from "./ProgessBarCircle";
+import ProgressBarCircle from "../../../../commonComponents/ProgessBarCircle";
 
 type MovieCardHeaderProps = {
   percentage: number;
@@ -24,7 +24,6 @@ const Header = styled.div`
 `;
 
 const Title = styled.h1`
-
 `;
 
 export default MovieCardHeader;

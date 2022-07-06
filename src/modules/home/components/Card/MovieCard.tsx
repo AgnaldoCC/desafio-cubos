@@ -6,7 +6,7 @@ import GenreTags from "./GenreTags";
 import MovieCardHeader from "./MovieCardHeader";
 import MovieReleaseDate from "./MovieReleaseDate";
 
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 type MovieCardProps = {
   movie: Movie;

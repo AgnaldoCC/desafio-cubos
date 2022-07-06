@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 type ProgressBarCircleProps = {
   percentage: number;
+  theme?: string;
 }
 
 const ProgressBarCircle = (props: ProgressBarCircleProps) => {
@@ -13,15 +14,16 @@ const ProgressBarCircle = (props: ProgressBarCircleProps) => {
         text={`${props.percentage}%`}
         styles={{
           path: {
-            stroke: `#000000`,
+            stroke: props.theme === 'light' ? "#FFFFFF" : `#000000`,
           },
           trail: {
-            stroke: "#FFFFFF",
+            stroke: props.theme === 'light' ? "transparent" : `#FFFFFF`,
           },
           text: {
             textAnchor: 'middle',
             fontSize: "35px",
-            dominantBaseline: 'middle'
+            dominantBaseline: 'middle',
+            fill: props.theme === 'light' ? "#FFFFFF" : `#000000`,
           }
         }}
       />

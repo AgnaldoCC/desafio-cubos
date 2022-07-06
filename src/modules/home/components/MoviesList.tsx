@@ -9,7 +9,7 @@ import MovieCard from "./Card/MovieCard";
 import Pagination from "./Pagination";
 
 const MoviesList = () => {
-  const { page, query} = useMoviesStore((state) => ({page: state.page, query: state.query}));
+  const { page, query } = useMoviesStore((state) => ({page: state.page, query: state.query}));
   const { data: movies, isLoading }: {data: Movies, isLoading: boolean} = useMovies(query, page);
 
   return (
