@@ -15,30 +15,45 @@ const MovieDetails = () => {
   
   return (
     <DefaultTemplate>
-      <Row>
+      <Container>
         <MovieDetailsCard movie={movie} />
         <RoundedImage src={`${IMAGE_URL}${movie?.poster_path}`} alt='Movie poster' />
-      </Row>
-      <YouTube 
+      </Container>
+      <CustomYoutubePlayer 
         videoId={movie?.videos.results[0].key} 
-        style={{
-          margin: "40px auto 0",
-        }}
       />
     </DefaultTemplate>
   )
 };
 
-const Row = styled.div`
+const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
+  
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
 const RoundedImage = styled(CardImage)`
   border-radius: 12px;
+  width: 100%;
+
+  @media screen and (min-width: 1024px) {
+    width: unset;
+  }
 `;
+
+const CustomYoutubePlayer = styled(YouTube)`
+  margin: 40px auto 0;
+  width: 100%;
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+`;  
 
 export default MovieDetails
