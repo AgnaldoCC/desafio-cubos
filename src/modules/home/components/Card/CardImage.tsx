@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const CardImage = styled.img`
   border-radius: 12px 12px 0 0;
-  object-fit: contain;
   width: auto;
   height: auto;
   
